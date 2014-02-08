@@ -5,13 +5,15 @@ C# implementation of IgushArray data structure
 (autor made it on C++)
 May be used instead of List in cases with many insertion/removing operations
 
-# Declarations of original IgushArray realization
+Declarations of original IgushArray realization
+-----------------------------------------------
 
 http://igushev.ru/papers/igusharray/ - not works now, but you can try to google it!
 Эдуард Игушев
 IgushArray (быстрый массив)
 
-# Licence of original IgushArray realization
+Licence of original IgushArray realization
+------------------------------------------
 
 Загрузка. Гарантия и лицензия
 
@@ -20,7 +22,8 @@ IgushArray (быстрый массив)
 Сохранение оригинального имени и ссылку на источник обязательно.
 Любой отзыв желателен :-)
 
-# Algorithmic complexity characteristics
+Algorithmic complexity characteristics
+--------------------------------------
 
 - Access by index - O(1)
 - Insertion at index - 0(sqrt(n)) - better than List (O(n))
@@ -28,7 +31,8 @@ IgushArray (быстрый массив)
 - Removing at index - 0(sqrt(n)) - better than List (O(n))
 - Iteration by all elements of array - O(n)
 
-# Disadvantages
+Disadvantages
+-------------
 
 - Parameter m = sqrt(n) mast be settet manualy
 - Parameter m can't be changed after structure creation, although structure is reserve memory dynamic, it can't change subblock size
