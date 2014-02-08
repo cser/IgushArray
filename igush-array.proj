@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file was writen for launching with MSBuild
+-->
+<Project DefaultTargets="Main" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+	</ItemGroup>
+	<Target Name="Main">
+		<MakeDir Directories="Bin\" />
+		<CSC Sources="IgushArray.cs" TargetType="library" OutputAssembly="Bin\IgushArray.dll" />
+		<CSC Sources="Tester.cs" References="Bin\IgushArray.dll" TargetType="exe" OutputAssembly="Bin\Tester.exe" />
+		<CSC Sources="IgushArrayTest.cs"
+			References="NUnit\nunit.framework.dll; Bin\IgushArray.dll"
+			TargetType="library"
+			OutputAssembly="Bin\IgushArrayTests.dll" />
+		<Exec Command="NUnit\nunit-console-x86.exe Bin\IgushArrayTests.dll" />
+	</Target>
+</Project>
+
